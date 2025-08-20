@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import QuickMessageForm from "@/components/QuickMessageForm";
 
 export const metadata = { title: "Contact — Luis Tupac" };
 
@@ -76,56 +77,15 @@ export default function ContactPage() {
             </a>
           </CardContent>
         </Card>
-
         {/* Right: quick message form */}
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-base">Quick message</CardTitle>
           </CardHeader>
           <CardContent>
-            {/* Replace the action URL with your own Formspree endpoint or handler */}
-            <form
-              action="https://formspree.io/f/your-form-id"
-              method="POST"
-              className="space-y-4"
-            >
-              {/* Optional subject to help you filter */}
-              <input type="hidden" name="_subject" value="Portfolio contact" />
-
-              <div className="grid gap-2">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" name="name" placeholder="Your name" required />
-              </div>
-
-              <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  inputMode="email"
-                  placeholder="you@example.com"
-                  required
-                />
-              </div>
-
-              <div className="grid gap-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="Hi Luis — loved your IDP/FinOps work. Let's chat about…"
-                  required
-                  rows={5}
-                />
-              </div>
-
-              <div className="flex items-center justify-end">
-                <Button type="submit">Send message</Button>
-              </div>
-            </form>
+            <QuickMessageForm /> {/* 👈 swaps just this square */}
           </CardContent>
-        </Card>
+        </Card>{" "}
       </div>
     </section>
   );

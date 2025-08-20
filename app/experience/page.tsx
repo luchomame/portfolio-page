@@ -1,4 +1,5 @@
 // app/experience/page.tsx
+import Image from "next/image";
 import {
   Card,
   CardHeader,
@@ -15,11 +16,21 @@ export default function ExperiencePage() {
       <h1 className="h2">Experience</h1>
 
       <Card className="transition-colors hover:bg-muted/50 hover:shadow-md hover:scale-[1.01]">
-        <CardHeader>
-          <CardTitle>General Motors (GM) — Roswell, GA</CardTitle>
-          <CardDescription>
-            Software Engineer - Platform Engineering | Jan 2025 - Present
-          </CardDescription>
+        <CardHeader className="flex flex-row items-center gap-3">
+          <div className="relative w-10 h-10 flex-shrink-0">
+            <Image
+              src="/gm-logo.png"
+              alt="GM logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div>
+            <CardTitle>General Motors (GM) — Roswell, GA</CardTitle>
+            <CardDescription>
+              Software Engineer - Platform Engineering | Jan 2025 - Present
+            </CardDescription>
+          </div>
         </CardHeader>
         <CardContent>
           <ul className="list-disc ml-5 space-y-2 text-sm text-muted-foreground">
@@ -44,12 +55,22 @@ export default function ExperiencePage() {
       </Card>
 
       <Card className="transition-colors hover:bg-muted/50 hover:shadow-md hover:scale-[1.01]">
-        <CardHeader>
-          <CardTitle>General Motors (GM) — Roswell, GA</CardTitle>
-          <CardDescription>
-            Software Developer - Backend, Cloud Data Services | Jul 2022 - Dec
-            2024
-          </CardDescription>
+        <CardHeader className="flex flex-row items-center gap-3">
+          <div className="relative w-10 h-10 flex-shrink-0">
+            <Image
+              src="/gm-logo.png"
+              alt="GM logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div>
+            <CardTitle>General Motors (GM) — Roswell, GA</CardTitle>
+            <CardDescription>
+              Software Developer - Backend, Cloud Data Services | Jul 2022 - Dec
+              2024
+            </CardDescription>
+          </div>
         </CardHeader>
         <CardContent>
           <ul className="list-disc ml-5 space-y-2 text-sm text-muted-foreground">
@@ -74,9 +95,21 @@ export default function ExperiencePage() {
       </Card>
 
       <Card className="transition-colors hover:bg-muted/50 hover:shadow-md hover:scale-[1.01]">
-        <CardHeader>
-          <CardTitle>General Motors (GM) — Roswell, GA</CardTitle>
-          <CardDescription>Data Engineer | Mar 2021 - Jul 2022</CardDescription>
+        <CardHeader className="flex flex-row items-center gap-3">
+          <div className="relative w-10 h-10 flex-shrink-0">
+            <Image
+              src="/gm-logo.png"
+              alt="GM logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div>
+            <CardTitle>General Motors (GM) — Roswell, GA</CardTitle>
+            <CardDescription>
+              Data Engineer | Mar 2021 - Jul 2022
+            </CardDescription>
+          </div>
         </CardHeader>
         <CardContent>
           <ul className="list-disc ml-5 space-y-2 text-sm text-muted-foreground">

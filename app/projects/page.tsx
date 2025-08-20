@@ -1,23 +1,21 @@
-// app/projects/page.tsx
-import ProjectCard from "@/components/ProjectCard";
+import ProjectsTabs from "./ProjectsTabs";
 import { projects } from "@/lib/projects";
 
 export const metadata = { title: "Projects — Luis Tupac" };
 
 export default function ProjectsPage() {
+  const grad = projects.filter((p) => p.level === "grad");
+  const undergrad = projects.filter((p) => p.level === "undergrad");
+
   return (
     <section className="section">
       <h1 className="h2 mb-2">Projects</h1>
-      <p className="mb-6 text-sm text-muted-foreground">
-        A selection of engineering and ML projects. Click into the code or
-        report for details.
+      <p className="mb-8 text-sm text-muted-foreground">
+        A selection of engineering and ML work. Click into code or reports for
+        details.
       </p>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((p) => (
-          <ProjectCard key={p.title} {...p} />
-        ))}
-      </div>
+      <ProjectsTabs grad={grad} undergrad={undergrad} />
     </section>
   );
 }
