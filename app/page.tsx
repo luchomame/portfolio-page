@@ -62,7 +62,7 @@ export default function Home() {
           <div className="relative w-32 h-32 flex-shrink-0 overflow-hidden rounded-full border">
             <Image
               src="/luis-solo.jpg"
-              alt="Luis Tupac walking his dog"
+              alt="LT"
               fill
               className="object-cover"
               priority
@@ -84,7 +84,8 @@ export default function Home() {
               <li>
                 <span className="font-medium text-foreground">Highlights:</span>{" "}
                 Built GM’s first IDP; cloud-agnostic FinOps platform; saved
-                $3M/yr via Spark-native encryption; 90%+ latency reduction
+                $3M/yr via Spark-native encryption and achieved 90%+ latency
+                reduction for decrypting data
               </li>
               <li>
                 <span className="font-medium text-foreground">Stack:</span>{" "}

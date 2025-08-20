@@ -1,5 +1,6 @@
 import ProjectsTabs from "./ProjectsTabs";
 import { projects } from "@/lib/projects";
+import { Suspense } from "react";
 
 export const metadata = { title: "Projects — Luis Tupac" };
 
@@ -14,8 +15,13 @@ export default function ProjectsPage() {
         A selection of engineering and ML work. Click into code or reports for
         details.
       </p>
-
-      <ProjectsTabs grad={grad} undergrad={undergrad} />
+      <Suspense
+        fallback={
+          <p className="text-sm text-muted-foreground">Loading projects…</p>
+        }
+      >
+        <ProjectsTabs grad={grad} undergrad={undergrad} />
+      </Suspense>{" "}
     </section>
   );
 }
