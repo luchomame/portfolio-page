@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Luis Tupac — Portfolio",
@@ -21,7 +22,8 @@ export default function RootLayout({
           <main className="container flex-1">{children}</main>
           <Footer />
         </ThemeProvider>
-      </body>{" "}
+        <Analytics />
+      </body>
     </html>
   );
 }
