@@ -12,6 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+import { useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
@@ -23,6 +24,7 @@ const links = [
 
 export default function Header() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur border-b">
@@ -66,7 +68,7 @@ export default function Header() {
           <ThemeToggle />
 
           {/* Mobile menu button */}
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button
                 variant="outline"
@@ -88,6 +90,7 @@ export default function Header() {
                     <li key={l.href}>
                       <Link
                         href={l.href}
+                        onClick={() => setOpen(false)}
                         className={clsx(
                           "block w-full px-3 py-2 rounded-md",
                           active
