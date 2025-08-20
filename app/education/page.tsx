@@ -35,7 +35,7 @@ export default function EducationPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="p-0 pt-3">
-              <ul className="ml-5 list-disc space-y-2 text-sm text-muted-foreground">
+              <ul className="ml-5 list-disc space-y-2 text-sm text-foreground">
                 <li>
                   Specialized in Deep Learning &amp; Time Series Analysis.
                 </li>
@@ -69,7 +69,7 @@ export default function EducationPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="p-0 pt-3">
-              <ul className="ml-5 list-disc space-y-2 text-sm text-muted-foreground">
+              <ul className="ml-5 list-disc space-y-2 text-sm text-foreground">
                 <li>Minor in Mathematical Sciences.</li>
                 <li>Hackathon Winner.</li>
                 <li>Upper-level Math Tutor for 2 years.</li>

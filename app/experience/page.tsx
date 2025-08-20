@@ -33,7 +33,7 @@ export default function ExperiencePage() {
           </div>
         </CardHeader>
         <CardContent>
-          <ul className="list-disc ml-5 space-y-2 text-sm text-muted-foreground">
+          <ul className="list-disc ml-5 space-y-2 text-sm text-foreground">
             <li>
               Led GM's first Internal Developer Platform; accelerated onboarding
               & time-to-prod by abstracting infra.
@@ -73,7 +73,7 @@ export default function ExperiencePage() {
           </div>
         </CardHeader>
         <CardContent>
-          <ul className="list-disc ml-5 space-y-2 text-sm text-muted-foreground">
+          <ul className="list-disc ml-5 space-y-2 text-sm text-foreground">
             <li>
               Maintained & scaled enterprise data lake; ingestion via
               GoldenGate, Fivetran, and custom services.
@@ -112,7 +112,7 @@ export default function ExperiencePage() {
           </div>
         </CardHeader>
         <CardContent>
-          <ul className="list-disc ml-5 space-y-2 text-sm text-muted-foreground">
+          <ul className="list-disc ml-5 space-y-2 text-sm text-foreground">
             <li>
               Built SQL/PySpark pipelines on Azure Databricks across
               bronze/silver/gold layers.

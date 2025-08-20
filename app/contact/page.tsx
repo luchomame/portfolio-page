@@ -25,9 +25,7 @@ export default function ContactPage() {
             >
               <div className="space-y-1">
                 <p className="font-medium text-foreground">Email</p>
-                <p className="text-sm text-muted-foreground">
-                  luistupac0@gmail.com
-                </p>
+                <p className="text-sm text-foreground">luistupac0@gmail.com</p>
               </div>
               <Button size="sm" variant="default" type="button">
                 <Mail className="h-4 w-4" />
@@ -44,7 +42,7 @@ export default function ContactPage() {
             >
               <div className="space-y-1">
                 <p className="font-medium text-foreground">LinkedIn</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-foreground">
                   linkedin.com/in/luis-tupac1
                 </p>
               </div>
@@ -63,9 +61,7 @@ export default function ContactPage() {
             >
               <div className="space-y-1">
                 <p className="font-medium text-foreground">GitHub</p>
-                <p className="text-sm text-muted-foreground">
-                  github.com/luchomame
-                </p>
+                <p className="text-sm text-foreground">github.com/luchomame</p>
               </div>
               <Button size="sm" variant="outline" type="button">
                 <Github className="h-4 w-4" />

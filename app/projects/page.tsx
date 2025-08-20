@@ -11,14 +11,12 @@ export default function ProjectsPage() {
   return (
     <section className="section">
       <h1 className="h2 mb-2">Projects</h1>
-      <p className="mb-8 text-sm text-muted-foreground">
+      <p className="mb-8 text-sm text-foreground">
         A selection of engineering and ML work. Click into code or reports for
         details.
       </p>
       <Suspense
-        fallback={
-          <p className="text-sm text-muted-foreground">Loading projects…</p>
-        }
+        fallback={<p className="text-sm text-foreground">Loading projects…</p>}
       >
         <ProjectsTabs grad={grad} undergrad={undergrad} />
       </Suspense>{" "}

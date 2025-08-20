@@ -12,11 +12,11 @@ export default function Home() {
         <div className="flex items-start gap-6">
           {/* Left: intro */}
           <div className="flex-1">
-            <p className="text-sm uppercase tracking-wide text-muted-foreground">
+            <p className="text-sm uppercase tracking-wide text-foreground">
               Hello, I'm
             </p>
             <h1 className="h1">Luis Tupac</h1>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-lg text-foreground">
               Software & Data Engineer — Platform Engineering, FinOps, and
               ML/NLP. I build internal developer platforms, optimize cloud cost,
               and turn data into products.
@@ -76,7 +76,7 @@ export default function Home() {
             <CardTitle className="text-base">Snapshot</CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <ul className="space-y-3 text-sm text-foreground">
               <li>
                 <span className="font-medium text-foreground">Current:</span>{" "}
                 Software Engineer, Platform Engineering @ GM
