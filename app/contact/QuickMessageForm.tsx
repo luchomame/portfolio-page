@@ -84,7 +84,7 @@ export default function QuickMessageForm() {
 
       {status === "error" && (
         <p className="text-red-600 text-sm">
-          ❌ Something went wrong. Please try again later.
+          Something went wrong. Please try again later.
         </p>
       )}
     </form>

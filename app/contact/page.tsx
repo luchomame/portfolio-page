@@ -20,13 +20,13 @@ export default function ContactPage() {
           <CardContent className="flex flex-col gap-3">
             {/* Email */}
             <a
-              href="mailto:luis@example.com"
+              href="mailto:luistupac0@gmail.com"
               className="flex items-center justify-between rounded-lg border p-4 transition-colors hover:bg-muted/50 hover:shadow-sm"
             >
               <div className="space-y-1">
                 <p className="font-medium text-foreground">Email</p>
                 <p className="text-sm text-muted-foreground">
-                  luis@example.com
+                  luistupac0@gmail.com
                 </p>
               </div>
               <Button size="sm" variant="default" type="button">

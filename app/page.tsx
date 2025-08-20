@@ -25,9 +25,9 @@ export default function Home() {
             <div className="mt-6 flex flex-wrap gap-3">
               <Button variant="outline" asChild>
                 <a
-                  href="/Luis_Tupac_Resume.pdf"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="https://drive.google.com/uc?export=download&id=1ObB6aBj-wupeD4_93IAMTWWrO0Sbo_hZ"
+                  download="Luis_Tupac_Resume.pdf"
+                  aria-label="Download Luis Tupac résumé as PDF"
                 >
                   <FileDown className="h-4 w-4" /> Download Resume
                 </a>

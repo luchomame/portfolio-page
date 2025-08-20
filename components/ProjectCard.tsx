@@ -26,7 +26,8 @@ export default function ProjectCard({
   reportUrl,
 }: Props) {
   return (
-    <Card className="flex h-full flex-col transition-colors">
+    <Card className="flex h-full flex-col transition-colors hover:bg-muted/50 hover:shadow-md hover:scale-[1.01]">
+      {" "}
       <div className="relative w-full aspect-video overflow-hidden rounded-t-xl bg-muted">
         <Image
           src={image}
@@ -37,11 +38,9 @@ export default function ProjectCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/10 to-transparent" />
       </div>
-
       <CardHeader className="pb-2">
         <CardTitle className="text-base">{title}</CardTitle>
       </CardHeader>
-
       <CardContent className="flex-1">
         <p className="text-sm text-muted-foreground">{blurb}</p>
 
@@ -56,7 +55,6 @@ export default function ProjectCard({
           ))}
         </div>
       </CardContent>
-
       {(codeUrl || reportUrl) && (
         <CardFooter className="mt-auto flex justify-end gap-2">
           {codeUrl && (

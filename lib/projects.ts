@@ -2,12 +2,12 @@
 export type Project = {
   title: string;
   blurb: string;
-  image?: string; // e.g. "/projects/fastmri.png"
+  image?: string;
   tags: string[];
   codeUrl?: string;
   reportUrl?: string;
   level: "grad" | "undergrad";
-  year?: string; // optional; e.g. "2024"
+  year?: string;
 };
 
 export const projects: Project[] = [
@@ -18,9 +18,9 @@ export const projects: Project[] = [
     tags: ["PyTorch", "Lightning", "Computer Vision"],
     codeUrl: "https://github.com/luchomame/fastmri-roi-unet",
     reportUrl: "#",
-    image: "/projects/fastmri.png", // optional placeholder
+    image: "/fastmri.png",
     level: "grad",
-    year: "2024",
+    year: "2025",
   },
   {
     title: "Financial Risk Scoring (NDR)",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     reportUrl: "#",
     image: "/projects/ndr-risk.png",
     level: "grad",
-    year: "2024",
+    year: "2025",
   },
   {
     title: "TRiBX Activity Finder",
@@ -40,9 +40,9 @@ export const projects: Project[] = [
     tags: ["React", "Mapbox", "DBSCAN", "Haversine"],
     codeUrl: "https://github.com/luchomame/activity-finder-tribx",
     reportUrl: "#",
-    image: "/projects/tribx.png",
+    image: "/tribx.png",
     level: "grad",
-    year: "2023",
+    year: "2024",
   },
   {
     title: "SEIR Flu Simulation",
@@ -53,17 +53,18 @@ export const projects: Project[] = [
     reportUrl: "#",
     image: "/projects/seir.png",
     level: "grad",
-    year: "2023",
+    year: "2024",
   },
+
   // Undergrad Projects
   {
     title: "Machine Learning Sentiment Analysis Tool",
     blurb:
       "Ensemble sentiment classifier trained on movie reviews & Twitter data (Naïve Bayes, Linear Regression, Stochastic methods).",
     tags: ["Python", "NLP", "Naïve Bayes"],
-    codeUrl: "https://github.com/luchomame/ml-sentiment-analysis", // placeholder
+    codeUrl: "https://github.com/luchomame/ml-sentiment-analysis",
     reportUrl: "#",
-    image: "/projects/ml-sentiment.png", // add later
+    image: "/sentiment-analysis-tool-undergrad.png",
     level: "undergrad",
     year: "2020",
   },
@@ -72,9 +73,9 @@ export const projects: Project[] = [
     blurb:
       "Hackathon-winning app (Southern Hacks 2020) that flagged local disaster tweets, analyzed sentiment, and routed users to shelters.",
     tags: ["Python", "TextBlob", "Hackathon"],
-    codeUrl: "https://github.com/luchomame/guardian-tweet", // placeholder
+    codeUrl: "https://github.com/luchomame/guardian-tweet",
     reportUrl: "#",
-    image: "/projects/guardian-tweet.png",
+    image: "/hackathon.jpg",
     level: "undergrad",
     year: "2020",
   },
@@ -83,9 +84,9 @@ export const projects: Project[] = [
     blurb:
       "3-tier platform for sharing Extensible 3D graphics with upload, rating, and collaboration features.",
     tags: ["Web", "3D Graphics", "X3D"],
-    codeUrl: "https://github.com/luchomame/x3d-repository", // placeholder
+    codeUrl: "https://github.com/luchomame/x3d-repository",
     reportUrl: "#",
-    image: "/projects/x3d-repository.png",
+    image: "/batman_x3d.png",
     level: "undergrad",
     year: "2021",
   },
@@ -94,9 +95,9 @@ export const projects: Project[] = [
     blurb:
       "Converted older web apps into React Native format as a self-driven learning project.",
     tags: ["React Native", "JavaScript"],
-    codeUrl: "https://github.com/luchomame/react-native-learning", // placeholder
+    codeUrl: "https://github.com/luchomame/react-native-learning",
     reportUrl: "#",
-    image: "/projects/react-native-learning.png",
+    image: "/react-native-learning.jpg",
     level: "undergrad",
     year: "2021",
   },
