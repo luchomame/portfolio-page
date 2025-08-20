@@ -2,10 +2,7 @@
 import { Mail, Github, Linkedin } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import QuickMessageForm from "@/components/QuickMessageForm";
+import QuickMessageForm from "@/app/contact/QuickMessageForm";
 
 export const metadata = { title: "Contact — Luis Tupac" };
 
@@ -83,7 +80,7 @@ export default function ContactPage() {
             <CardTitle className="text-base">Quick message</CardTitle>
           </CardHeader>
           <CardContent>
-            <QuickMessageForm /> {/* 👈 swaps just this square */}
+            <QuickMessageForm /> {/* swaps just this square */}
           </CardContent>
         </Card>{" "}
       </div>
