@@ -68,6 +68,7 @@ export const projects: Project[] = [
     image: "/projects/sentiment-analysis-tool-undergrad.png",
     level: "undergrad",
     year: "2020",
+    codeUrl: "https://github.com/luchomame/SentimentAnalysisFinal",
   },
   {
     title: "Guardian Tweet",
@@ -77,6 +78,7 @@ export const projects: Project[] = [
     image: "/projects/hackathon.jpg",
     level: "undergrad",
     year: "2020",
+    codeUrl: "https://github.com/luchomame/Guardian-Tweet",
   },
   {
     title: "X3D Repository",
@@ -86,6 +88,7 @@ export const projects: Project[] = [
     image: "/projects/batman_x3d.png",
     level: "undergrad",
     year: "2021",
+    codeUrl: "https://github.com/luchomame/X3D_Repo",
   },
   {
     title: "React Native Learning Project",
