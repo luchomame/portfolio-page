@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import {
   Card,
@@ -15,6 +16,8 @@ type Props = {
   tags: string[];
   codeUrl?: string;
   reportUrl?: string;
+  imageFit?: "cover" | "contain"; // default: "cover"
+  imageAspect?: "video" | "square" | "golden"; // default: "video"
 };
 
 export default function ProjectCard({
@@ -24,26 +27,60 @@ export default function ProjectCard({
   tags,
   codeUrl,
   reportUrl,
+  imageFit = "contain",
+  imageAspect = "square",
 }: Props) {
+  const href = reportUrl || codeUrl;
+  const clickable = Boolean(href);
+
+  const aspectClass =
+    imageAspect === "square"
+      ? "aspect-square"
+      : imageAspect === "golden"
+      ? "aspect-[1.618/1]"
+      : "aspect-video"; // default
+
+  const imgClass =
+    imageFit === "contain"
+      ? "object-contain p-3 transition-transform duration-300 group-hover:scale-[1.02]"
+      : "object-cover transition-transform duration-300 group-hover:scale-[1.03]";
+
   return (
-    <Card className="flex h-full flex-col transition-colors hover:bg-muted/50 hover:shadow-md hover:scale-[1.01]">
-      {" "}
-      <div className="relative w-full aspect-video overflow-hidden rounded-t-xl bg-muted">
+    <Card className="group relative flex h-full flex-col transition-transform hover:shadow-md hover:scale-[1.01]">
+      {/* IMAGE */}
+      <div
+        className={`relative w-full overflow-hidden rounded-t-xl bg-muted ${aspectClass}`}
+      >
+        {clickable && (
+          <Link
+            href={href!}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${title}`}
+            className="absolute inset-0 z-10"
+          />
+        )}
+
         <Image
           src={image}
           alt={title}
           fill
-          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover"
+          sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
+          className={`${imgClass} ${clickable ? "cursor-pointer" : ""}`}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/10 to-transparent" />
+
+        {/* Only add the top gradient when using cover (helps text contrast on photos) */}
+        {imageFit === "cover" && (
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/10 to-transparent" />
+        )}
       </div>
+
       <CardHeader className="pb-2">
         <CardTitle className="text-base">{title}</CardTitle>
       </CardHeader>
-      <CardContent className="flex-1">
-        <p className="text-sm text-muted-foreground">{blurb}</p>
 
+      <CardContent className="flex-1">
+        <p className="text-sm text-foreground">{blurb}</p>
         <div className="mt-3 flex flex-wrap gap-2">
           {tags.map((t) => (
             <span
@@ -55,6 +92,7 @@ export default function ProjectCard({
           ))}
         </div>
       </CardContent>
+
       {(codeUrl || reportUrl) && (
         <CardFooter className="mt-auto flex justify-end gap-2">
           {codeUrl && (

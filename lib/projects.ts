@@ -8,6 +8,8 @@ export type Project = {
   reportUrl?: string;
   level: "grad" | "undergrad";
   year?: string;
+  imageFit?: "cover" | "contain"; // default: "cover"
+  imageAspect?: "video" | "square" | "golden"; // default:
 };
 
 export const projects: Project[] = [
@@ -16,22 +18,23 @@ export const projects: Project[] = [
     blurb:
       "ROI-weighted loss improved knee MRI reconstruction quality (↑SSIM/PSNR, ↓NMSE) vs baseline U-Net.",
     tags: ["PyTorch", "Lightning", "Computer Vision"],
-    codeUrl: "https://github.com/luchomame/fastmri-roi-unet",
-    reportUrl: "#",
-    image: "/fastmri.png",
+    codeUrl: "https://github.com/luchomame/fastmri-cold-diffusion",
+    reportUrl: "/papers/fastmri.pdf",
+    image: "/projects/fastmri.png",
     level: "grad",
     year: "2025",
   },
   {
-    title: "Financial Risk Scoring (NDR)",
+    title: "Financial Risk Scoring",
     blurb:
       "Token-focused risk feature + FinBERT; VIX(t+7) boosted 5-class movement classification on S&P 500 constituents.",
     tags: ["NLP", "FinBERT", "DuckDB", "XGBoost", "Time Series"],
     codeUrl: "https://github.com/luchomame/financial-risk-scoring-nlp",
-    reportUrl: "#",
-    image: "/projects/ndr-risk.png",
+    reportUrl: "/papers/financial-risk-scoring-nlp.pdf",
+    image: "/projects/practicum.png",
     level: "grad",
     year: "2025",
+    imageFit: "cover",
   },
   {
     title: "TRiBX Activity Finder",
@@ -39,8 +42,8 @@ export const projects: Project[] = [
       "Real-time events map with DBSCAN clustering and weather-aware suggestions.",
     tags: ["React", "Mapbox", "DBSCAN", "Haversine"],
     codeUrl: "https://github.com/luchomame/activity-finder-tribx",
-    reportUrl: "#",
-    image: "/tribx.png",
+    reportUrl: "/papers/tribx.pdf",
+    image: "/projects/tribx.png",
     level: "grad",
     year: "2024",
   },
@@ -50,7 +53,7 @@ export const projects: Project[] = [
       "Classroom spread simulation; vaccination scenarios via interactive widget.",
     tags: ["Python", "ODEs", "Modeling"],
     codeUrl: "https://github.com/luchomame/seir-flu-sim",
-    reportUrl: "#",
+    reportUrl: "/papers/seir.pdf",
     image: "/projects/seir.png",
     level: "grad",
     year: "2024",
@@ -62,9 +65,7 @@ export const projects: Project[] = [
     blurb:
       "Ensemble sentiment classifier trained on movie reviews & Twitter data (Naïve Bayes, Linear Regression, Stochastic methods).",
     tags: ["Python", "NLP", "Naïve Bayes"],
-    codeUrl: "https://github.com/luchomame/ml-sentiment-analysis",
-    reportUrl: "#",
-    image: "/sentiment-analysis-tool-undergrad.png",
+    image: "/projects/sentiment-analysis-tool-undergrad.png",
     level: "undergrad",
     year: "2020",
   },
@@ -73,9 +74,7 @@ export const projects: Project[] = [
     blurb:
       "Hackathon-winning app (Southern Hacks 2020) that flagged local disaster tweets, analyzed sentiment, and routed users to shelters.",
     tags: ["Python", "TextBlob", "Hackathon"],
-    codeUrl: "https://github.com/luchomame/guardian-tweet",
-    reportUrl: "#",
-    image: "/hackathon.jpg",
+    image: "/projects/hackathon.jpg",
     level: "undergrad",
     year: "2020",
   },
@@ -84,9 +83,7 @@ export const projects: Project[] = [
     blurb:
       "3-tier platform for sharing Extensible 3D graphics with upload, rating, and collaboration features.",
     tags: ["Web", "3D Graphics", "X3D"],
-    codeUrl: "https://github.com/luchomame/x3d-repository",
-    reportUrl: "#",
-    image: "/batman_x3d.png",
+    image: "/projects/batman_x3d.png",
     level: "undergrad",
     year: "2021",
   },
@@ -95,9 +92,7 @@ export const projects: Project[] = [
     blurb:
       "Converted older web apps into React Native format as a self-driven learning project.",
     tags: ["React Native", "JavaScript"],
-    codeUrl: "https://github.com/luchomame/react-native-learning",
-    reportUrl: "#",
-    image: "/react-native-learning.jpg",
+    image: "/projects/react-native-learning.jpg",
     level: "undergrad",
     year: "2021",
   },
