@@ -20,7 +20,7 @@ export const projects: Project[] = [
     tags: ["PyTorch", "Lightning", "Computer Vision"],
     codeUrl: "https://github.com/luchomame/fastmri-cold-diffusion",
     reportUrl: "/papers/fastmri.pdf",
-    image: "/projects/fastmri.png",
+    image: "/projects/fastMRI.png",
     level: "grad",
     year: "2025",
   },
