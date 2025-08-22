@@ -16,7 +16,7 @@ export default function EducationPage() {
       <h1 className="h2">Education</h1>
 
       {/* Georgia Tech */}
-      <Card className="transition-colors hover:bg-muted/50 hover:shadow-md">
+      <Card className="transition-colors hover:bg-muted/50 hover:shadow-md hover:scale-[1.01]">
         <div className="flex items-start gap-4 p-4">
           <Image
             src="/gt.png"
@@ -31,7 +31,7 @@ export default function EducationPage() {
                 Georgia Institute of Technology — Atlanta, GA
               </CardTitle>
               <CardDescription>
-                Master of Science in Analytics | 2023 – 2025
+                Master of Science in Analytics | 2023 - 2025
               </CardDescription>
             </CardHeader>
             <CardContent className="p-0 pt-3">
@@ -50,7 +50,7 @@ export default function EducationPage() {
       </Card>
 
       {/* Georgia Southern */}
-      <Card className="transition-colors hover:bg-muted/50 hover:shadow-md">
+      <Card className="transition-colors hover:bg-muted/50 hover:shadow-md hover:scale-[1.01]">
         <div className="flex items-start gap-4 p-4">
           <Image
             src="/gsu.png"
@@ -65,7 +65,7 @@ export default function EducationPage() {
                 Georgia Southern University — Statesboro, GA
               </CardTitle>
               <CardDescription>
-                Bachelor of Science in Computer Science | 2016 – 2020
+                Bachelor of Science in Computer Science | 2016 - 2020
               </CardDescription>
             </CardHeader>
             <CardContent className="p-0 pt-3">

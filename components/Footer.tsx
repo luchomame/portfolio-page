@@ -18,7 +18,11 @@ export default function Footer() {
           >
             GitHub
           </a>
-          <a href="/api/resume" aria-label="Download Luis Tupac résumé as PDF">
+          <a
+            href="/api/resume"
+            aria-label="Download Luis Tupac résumé as PDF"
+            className="underline"
+          >
             Resume
           </a>
         </div>
